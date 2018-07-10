@@ -1,5 +1,5 @@
 [package]
-name = "nextrs_server"
+name = "server"
 version = "0.1.0"
 authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 
@@ -13,5 +13,5 @@ lazy_static = "1.0"
 version = "^0.6"
 default-features=false
 
-[dependencies.nextrs_client]
-path = "../client"
+[dependencies.client]
+path = "./../client"

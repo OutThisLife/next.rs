@@ -1,12 +1,12 @@
 extern crate actix;
 extern crate actix_web;
+extern crate client;
 extern crate env_logger;
-extern crate nextrs_client;
-
 extern crate tera;
 
 use actix::System;
 use actix_web::{error, http, middleware, server, App, Error, HttpResponse, Query, State};
+use client::render;
 use std::collections::HashMap;
 use tera::{Context, Tera};
 
@@ -18,7 +18,7 @@ fn index(
   (state, _): (State<AppState>, Query<HashMap<String, String>>),
 ) -> Result<HttpResponse, Error> {
   let mut ctx = Context::new();
-  ctx.add("yield", nextrs_client::render());
+  ctx.add("yield", &render());
 
   let s = state
     .template

@@ -1,11 +1,10 @@
 [package]
-build = "./build.rs"
-name = "nextrs_client"
+name = "client"
 version = "0.1.0"
 authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
-[dependencies]
-stdweb = { git = "https://github.com/koute/stdweb" }
+[target.'cfg(target_arch = "wasm32")'.dependencies.stdweb]
+git = "https://github.com/koute/stdweb"
