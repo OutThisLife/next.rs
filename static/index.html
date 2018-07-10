@@ -9,8 +9,10 @@
 <body>
   <h1>Start.</h1>
 
-  <div id="rust">{{ yield }}</div>
+  {% block content %}
+  <div id="root">{{ yield }}</div>
+  {% endblock content %}
 
-  <script src="index.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>

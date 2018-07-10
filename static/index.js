@@ -1,7 +1,8 @@
-import client from '../client/Cargo.toml'
+import client from './../client/Cargo.toml'
 
 try {
-  console.log(client)
+  const $root = document.getElementById('root')
+  $root.innerHTML = client.client_render()
 } catch (e) {
   console.error(e)
 }

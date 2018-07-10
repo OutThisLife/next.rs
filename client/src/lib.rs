@@ -17,6 +17,6 @@ pub fn render() -> String {
 
 #[cfg(target_arch = "wasm32")]
 #[js_export]
-pub fn client_render() -> String {
+fn client_render() -> String {
   render_to_html()
 }

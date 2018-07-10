@@ -6,9 +6,12 @@
   "author": "Talasan Nicholson <talasan.nicholson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "cd server && cargo run",
+    "start": "yarn build:client && cd server && cargo run",
+    "build": "yarn build:server && yarn build:client",
+    "build:client": "parcel build static/index.html",
+    "build:server": "cd server && cargo build",
     "test:server": "cd server && cargo watch -x \"test\"",
-    "dev": "parcel watch static/index.html --no-cache",
+    "dev": "parcel static/index.html -p 3000 --no-cache",
     "test:dev": "cd client && cargo watch -x \"test\""
   },
   "devDependencies": {

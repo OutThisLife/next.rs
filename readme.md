@@ -11,3 +11,6 @@ Then it will transform itself into an SPA via `stdweb`.
 ## Worfklow
 `yarn start` to see SSR in action
 `yarn client` to dev SPA
+
+## Requirements
+rustup & `rustup default nightly`
