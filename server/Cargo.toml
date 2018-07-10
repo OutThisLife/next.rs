@@ -4,5 +4,11 @@ version = "0.1.0"
 authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 
 [dependencies]
-actix = { git = "https://github.com/actix/actix-web" }
-futures = "*"
+actix = "0.5"
+
+[dependencies.actix-web]
+version = "^0.6"
+default-features=false
+
+#[dependency.nextrs_client]
+#path = "../client/"

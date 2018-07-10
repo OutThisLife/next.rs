@@ -1,8 +1,7 @@
-/target
-/app/pkg
-/pkg
-/dist
-/node_modules
+target/
+pkg/
+dist/
+node_modules/
 
 **/*.rs.bk
 *.log

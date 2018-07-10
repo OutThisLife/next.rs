@@ -1,0 +1,12 @@
+{
+  "name": "rust",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:OutThisLife/next.rs.git",
+  "author": "Talasan Nicholson <talasan.nicholson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "cd server && cargo run",
+    "ws": "cd server && cargo watch -x run"
+  }
+}
