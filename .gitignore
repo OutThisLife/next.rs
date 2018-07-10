@@ -2,6 +2,7 @@ target/
 pkg/
 dist/
 node_modules/
+.cache
 
 **/*.rs.bk
 *.log
