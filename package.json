@@ -7,6 +7,6 @@
   "license": "MIT",
   "scripts": {
     "server": "cd server && cargo run",
-    "ws": "cd server && cargo watch -x run"
+    "ws": "cd server && cargo watch -x \"build\" -x \"run -- run\""
   }
 }
