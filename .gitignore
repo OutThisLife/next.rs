@@ -1,0 +1,9 @@
+/target
+/app/pkg
+/pkg
+/dist
+/node_modules
+
+**/*.rs.bk
+*.log
+*.lock

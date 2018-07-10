@@ -1,0 +1,8 @@
+[package]
+name = "nextrs_server"
+version = "0.1.0"
+authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
+
+[dependencies]
+actix = { git = "https://github.com/actix/actix-web" }
+futures = "*"
