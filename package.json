@@ -6,7 +6,13 @@
   "author": "Talasan Nicholson <talasan.nicholson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server": "cd server && cargo run",
-    "ws": "cd server && cargo watch -x \"build\" -x \"run -- run\""
+    "start": "cd server && cargo run",
+    "server": "cd server && cargo watch -x \"test\" -x \"build\" -x \"run -- run\"",
+    "test": "cd server && cargo watch -x \"test\"",
+    "client": "parcel watch static/index.html --no-cache"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.4",
+    "parcel-plugin-cargo-web": "^0.3.0"
   }
 }
