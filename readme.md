@@ -1,10 +1,13 @@
 # next.rs :unicorn:
-[SSR + SPA(WASM)]
+[SSR + SPA(WASM)], heavy wip
 
-WORK IN PROGRESS
+## How it works
+[SSR] -> client lib -> static html output from params (path) given
+[SPA] -> js/html output from stdweb, incl. client-side routing
 
-## Render flow
-[SSR] -> client lib -> static html output from params given
-[SPA] -> html output from stdweb
+The "original html" will just be passed off to the server on runtime.
+Then it will transform itself into an SPA via `stdweb`.
 
-The "original html" will just be passed off to the server on runtime. Then it will transform itself into an SPA via `stdweb`
+## Worfklow
+`yarn start` to see SSR in action
+`yarn client` to dev SPA
