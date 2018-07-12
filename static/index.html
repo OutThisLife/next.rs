@@ -13,6 +13,13 @@
   <div id="root">{{ yield }}</div>
   {% endblock content %}
 
-  <script src="./index.js"></script>
+  <h1>no web title</h1>
+
+  <my-app>
+    <h1 slot="title">Title here.</h1>
+  </my-app>
+
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.0.2/webcomponents-bundle.min.js" async></script>
+  <script src="./index.js" async defer></script>
 </body>
 </html>

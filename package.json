@@ -15,7 +15,11 @@
     "test:dev": "cd client && cargo watch -x \"test\""
   },
   "devDependencies": {
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "parcel-bundler": "^1.9.4",
     "parcel-plugin-cargo-web": "^0.3.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.0.0-beta.53"
   }
 }

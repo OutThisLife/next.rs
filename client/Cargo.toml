@@ -6,5 +6,8 @@ authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 [lib]
 crate-type = ["cdylib", "rlib"]
 
+[dependencies]
+maplit = "^1"
+
 [dependencies.stdweb]
 git = "https://github.com/koute/stdweb"
