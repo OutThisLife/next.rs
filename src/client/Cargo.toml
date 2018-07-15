@@ -1,6 +1,11 @@
 [package]
-name = "rust"
+name = "client"
 version = "0.1.0"
 authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
+maplit = "^1"
+wasm-bindgen = "0.2.11"

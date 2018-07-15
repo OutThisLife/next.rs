@@ -1,25 +1,26 @@
 {
   "name": "rust",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "git@github.com:OutThisLife/next.rs.git",
   "author": "Talasan Nicholson <talasan.nicholson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build:client && cd server && cargo run",
-    "build": "yarn build:server && yarn build:client",
-    "build:client": "parcel build static/index.html",
-    "build:server": "cd server && cargo build",
-    "test:server": "cd server && cargo watch -x \"test\"",
-    "dev": "parcel static/index.html -p 3000 --no-cache",
-    "test:dev": "cd client && cargo watch -x \"test\""
+    "start": "yarn build:client && cd src/server && cargo run",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --hot --inline",
+    "setup": "rustup default nightly && rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   },
   "devDependencies": {
-    "babel-plugin-transform-custom-element-classes": "^0.1.0",
-    "parcel-bundler": "^1.9.4",
-    "parcel-plugin-cargo-web": "^0.3.0"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.0.0-beta.53"
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "html-webpack-plugin": "^3.2.0",
+    "rust-native-wasm-loader": "^0.8.1",
+    "wasm-loader": "^1.3.0",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }

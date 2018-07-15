@@ -1,8 +1,12 @@
 {
+  "plugins": ["syntax-dynamic-import"],
   "presets": [
-    "env"
-  ],
-  "plugins": [
-    "transform-custom-element-classes"
+    ["@babel/preset-env", {
+      "useBuiltIns": "usage",
+      "targets": {
+        "node": "current",
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }]
   ]
 }
