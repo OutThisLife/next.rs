@@ -46,9 +46,8 @@ module.exports = {
               {
                 loader: 'rust-native-wasm-loader',
                 options: {
-                  release: true,
-                  // release: prod,
-                  // gc: prod,
+                  release: prod,
+                  gc: prod,
                   wasmBindgen: {
                     wasm2es6js: true
                   }
