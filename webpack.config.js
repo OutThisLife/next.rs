@@ -13,7 +13,7 @@ module.exports = {
   },
   bail: true,
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: './src/public/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -62,7 +62,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: './src/index.html',
+      template: './src/public/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,

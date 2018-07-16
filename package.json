@@ -9,7 +9,7 @@
     "start": "cd src/server && cargo run",
     "build": "webpack --mode production",
     "heroku-postinstall": "yarn build",
-    "dev": "webpack-dev-server --mode development --hot --inline",
+    "dev": "webpack-dev-server --mode development --hot --inline --watch",
     "setup": "rustup default nightly && rustup update nightly && rustup target add wasm32-unknown-unknown --toolchain nightly && cargo install --force --git https://github.com/alexcrichton/wasm-gc"
   },
   "devDependencies": {

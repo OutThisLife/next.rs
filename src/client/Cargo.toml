@@ -7,5 +7,8 @@ authors = ["Talasan Nicholson <talasan.nicholson@gmail.com>"]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-maplit = "^1"
-wasm-bindgen = "0.2.11"
+wasm-bindgen = "*"
+maud = "*"
+maud_macros = "*"
+maplit = "*"
+rand = "*"

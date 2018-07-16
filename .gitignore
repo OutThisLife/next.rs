@@ -7,3 +7,13 @@
 *.log
 *.lock
 *.pdb
+
+**/*.rs.bk
+
+./Cargo.toml
+./Cargo.lock
+./target
+./src/main.rs
+
+/target
+**/*.rs.bk
