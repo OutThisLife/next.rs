@@ -18,7 +18,7 @@ fn main() {
   let sys = System::new("nextrs");
 
   let _server = server::new(move || {
-    let mut tera = compile_templates!("./../dist/**/*.html");
+    let mut tera = compile_templates!("./../../dist/**/*.html");
     tera.autoescape_on(vec![]);
 
     App::with_state(routes::AppState { templates: tera })

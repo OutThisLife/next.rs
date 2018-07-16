@@ -1,13 +1,9 @@
-target/
-pkg/
-dist/
-node_modules/
+**/target/
+**/pkg/
+**/dist/
+**/node_modules/
 .cache
 
-**/*.rs.bk
 *.log
 *.lock
 *.pdb
-
-/target
-**/*.rs.bk

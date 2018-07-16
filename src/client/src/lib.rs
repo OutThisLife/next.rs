@@ -4,7 +4,13 @@ extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 
+mod component;
+
 #[wasm_bindgen]
-pub fn add(number: i32) -> i32 {
-  number + 1
+pub fn add() -> String {
+  component::render("Sup")
+}
+
+pub fn render() -> String {
+  component::render("Sup")
 }

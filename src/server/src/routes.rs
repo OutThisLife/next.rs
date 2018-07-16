@@ -30,6 +30,12 @@ pub fn index(
 
 pub fn files(req: HttpRequest<AppState>) -> actix_web::Result<NamedFile> {
   let file: PathBuf = req.match_info().query("tail")?;
-  let path: String = ["./../dist/", &file.into_os_string().into_string().unwrap()].join("");
+  let path: String = [
+    "./../../dist/",
+    &file.into_os_string().into_string().unwrap(),
+  ].join("");
+
+  println!("{:?}", path);
+
   Ok(NamedFile::open(path)?)
 }
